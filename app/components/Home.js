@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
-
+var PropTypes = React.PropTypes;
+var SearchContainer = require('../containers/searchContainer');
 
 
 var styles = {
@@ -22,10 +23,11 @@ var styles = {
 }
 
 
-function Home () {
+function Home (props) {
   return (
   	<div style = {styles.container}>
   	<h1 style={styles.header}> Enter City and State </h1>
+  	<SearchContainer />
   	</div>
     
   )

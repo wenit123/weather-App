@@ -4,8 +4,8 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var hashHistory = ReactRouter.hashHistory;
 var IndexRoute = ReactRouter.IndexRoute;
-var Main = require('../components/Main');
-var Home = require("../components/Home");
+var Main = require('../containers/Main');
+var HomeContainer = require("../containers/HomeContainer");
 
 var routes = (
   <Router history={hashHistory}>
@@ -15,7 +15,7 @@ var routes = (
     component whenever a user hits the index '/' path of your app.
     Create a Home component and set it to the IndexRoute in your route configuration
     */
-      <IndexRoute component={Home} />
+      <IndexRoute component={HomeContainer} />
     </Route>
   </Router>
 );
