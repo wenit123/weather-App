@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var Search = require('../components/Search');
+var Main = require('../containers/Main');
 
 var SearchContainer = React.createClass({
 

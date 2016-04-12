@@ -7,18 +7,18 @@ var SearchContainer = require('../containers/searchContainer');
 var styles = {
 	container: {
 		backgroundSize: 'cover',
-    	backgroundImage: "url('app/images/pattern.svg')",
-    	display: 'flex',
-    	flexDirection: 'column',
-    	justifyContent: 'center',
-    	alignItems: 'center',
-    	height: '100%',
-    	width: '100%'
+    backgroundImage: "url('app/images/pattern.svg')",
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    display: 'flex',
+    height: '100%',
+    width: '100%'
 	},
+
 	header: {
     	fontSize: 40,
     	color: "white",
-    	
   	}
 }
 
