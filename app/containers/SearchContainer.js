@@ -26,6 +26,7 @@ var SearchContainer = React.createClass({
   	handleSubmitCity: function () {
     	console.log(this.state.city)
       getCurrent(this.state.city)
+      getForecast(this.state.city)
   	},
 
   	handleUpdateCity: function (e) {

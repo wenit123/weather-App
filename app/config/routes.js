@@ -16,6 +16,7 @@ var routes = (
     Create a Home component and set it to the IndexRoute in your route configuration
     */
       <IndexRoute component={HomeContainer} />
+      <Route path='forecast/:city' component={ForecastContainer} />
     </Route>
   </Router>
 );
