@@ -18,7 +18,10 @@ function prepUrl(int, queryStringData) {
 }
 
 function getQueryData(city) {
-	
+	/*
+	Current Weather: http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
+	5 Day Forecast: http://api.openweathermap.org/data/2.5/forecast/daily?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY&cnt=5
+	*/
 	return{
 		q: city,
 		type: 'accurate',
@@ -31,14 +34,26 @@ function getCurrent(city) {
 	var data = getQueryData(city);
 	var url = prepUrl('weather', data)
 
-	return axios.get(url).then(function(CurrentWeatherData){
-		console.log(CurrentWeatherData.data)
+	// return ?
+	return axios.get(url).then(function(currentData){
+		console.log(currentData.data)
+	})
+}
+
+function getForecast(city){
+	var data = getQueryData(city);
+	var url = prepUrl('forecast/daily', data)
+
+	// return ?
+	return axios.get(url).then(function(forecastData){
+		console.log(forecastData.data)
 	})
 }
 
 
 module.exports = {
   getCurrent: getCurrent,
+  getForecast: getForecast
 };
 
 
