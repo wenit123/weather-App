@@ -8,9 +8,10 @@ var styles = {
   },
   header: {
   	display: 'flex',
+    justifyContent: 'space-between',
   	background: "#F59938",
   	color: "white",
-	padding: 5,
+    padding: 5,
   }
 }
 

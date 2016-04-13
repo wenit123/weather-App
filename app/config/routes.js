@@ -10,7 +10,7 @@ var ForecastContainer = require('../containers/ForecastContainer');
 
 var routes = (
   <Router history={hashHistory}>
-    <Route path='/' component={Main}>
+    <Route path='*' component={Main}>
     /*
     Set up your route configuration file to activate the Main 
     component whenever a user hits the index '/' path of your app.

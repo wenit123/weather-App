@@ -10,7 +10,7 @@ var styles = {
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
-    height: '100%',
+    height: '500px',
     width: '100%'
 	},
 

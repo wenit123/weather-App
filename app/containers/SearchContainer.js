@@ -1,6 +1,9 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var Search = require('../components/Search');
+var Main = require('../containers/Main');
+var getCurrent = require('../helpers/api').getCurrent
+var getForecast = require('../helpers/api').getForecast
 
 var SearchContainer = React.createClass({
   contextTypes: {
