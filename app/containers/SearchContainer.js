@@ -3,6 +3,9 @@ var PropTypes = React.PropTypes;
 var Search = require('../components/Search');
 
 var SearchContainer = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
 
 	getDefaultProps: function () {
     	return {
@@ -20,8 +23,10 @@ var SearchContainer = React.createClass({
     	}
   	},
 
-  	handleSubmitCity: function () {
+  	handleSubmitCity: function (e) {
+      e.preventDefault()
     	console.log(this.state.city)
+      this.context.router.push('/forecast/' + this.state.city)
   	},
 
   	handleUpdateCity: function (e) {
@@ -30,7 +35,6 @@ var SearchContainer = React.createClass({
    	 	})
   	},
   
-
   	render: function () {
     	return (
       		<Search

@@ -1,5 +1,5 @@
 var React = require('react');
-var Search = require('./SearchContainer');
+var SearchContainer = require('./SearchContainer');
 
 var styles = {
   container: {
@@ -20,7 +20,7 @@ var Main = React.createClass({
       <div style={styles.container}>
       <div style={styles.header}> 
       <h2> Clever Title</h2>
-      
+      <SearchContainer direction='row' />
       </div>
         {this.props.children}
       </div>
