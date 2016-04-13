@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactRouter = require('react-router');
+//var ReactRouter = require('react-router');
 var PropTypes = React.PropTypes;
 var SearchContainer = require('../containers/searchContainer');
 

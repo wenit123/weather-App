@@ -51,7 +51,6 @@ function Search(props) {
 }
 
 
-
 Search.propTypes = {
 	direction: PropTypes.string,
   onSubmitCity: PropTypes.func.isRequired,
