@@ -4,7 +4,7 @@ var baseUrl = 'http://api.openweathermap.org/data/2.5/';
 var apikey = '44b04fd342232c08e6f8dfea1a7fc4b5';
 
 
-//dont understand 
+//don't understand 
 function prepRouteParams (queryStringData) {
   return Object.keys(queryStringData)
     .map(function (key) {

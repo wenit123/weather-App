@@ -7,6 +7,10 @@ var getForecast = require('../helpers/api').getForecast
 
 var SearchContainer = React.createClass({
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
 	getDefaultProps: function () {
     	return {
     	  	direction: 'column'
@@ -23,10 +27,11 @@ var SearchContainer = React.createClass({
     	}
   	},
 
-  	handleSubmitCity: function () {
+  	handleSubmitCity: function (e) {
+      e.preventDefault();
     	console.log(this.state.city)
-      getCurrent(this.state.city)
-      getForecast(this.state.city)
+      // push to the path
+      this.context.router.push('forecast/' + this.state.city)
   	},
 
   	handleUpdateCity: function (e) {
