@@ -2,6 +2,7 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var Search = require('../components/Search');
 var Main = require('../containers/Main');
+var getCurrent = require('../helpers/api').getCurrent
 
 var SearchContainer = React.createClass({
 
@@ -23,6 +24,7 @@ var SearchContainer = React.createClass({
 
   	handleSubmitCity: function () {
     	console.log(this.state.city)
+      getCurrent(this.state.city)
   	},
 
   	handleUpdateCity: function (e) {
