@@ -36,7 +36,7 @@ function getCurrent(city) {
 
 	// return ?
 	return axios.get(url).then(function(currentData){
-		console.log(currentData.data)
+		return currentData.data
 	})
 }
 
@@ -46,7 +46,7 @@ function getForecast(city){
 
 	// return ?
 	return axios.get(url).then(function(forecastData){
-		console.log(forecastData.data)
+		return forecastData.data
 	})
 }
 
