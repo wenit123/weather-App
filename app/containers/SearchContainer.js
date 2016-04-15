@@ -1,9 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var Search = require('../components/Search');
-var Main = require('../containers/Main');
-var getCurrent = require('../helpers/api').getCurrent
-var getForecast = require('../helpers/api').getForecast
 
 var SearchContainer = React.createClass({
   contextTypes: {
@@ -29,7 +26,7 @@ var SearchContainer = React.createClass({
   	handleSubmitCity: function (e) {
       e.preventDefault()
     	console.log(this.state.city)
-      this.context.router.push('/forecast/' + this.state.city)
+      this.context.router.push('forecast/' + this.state.city)
   	},
 
   	handleUpdateCity: function (e) {

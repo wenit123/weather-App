@@ -1,12 +1,10 @@
 var React = require('react');
 var Forecast = require('../components/Forecast');
-var getForcast = require('../helpers/api').getForcast;
+var getForecast = require('../helpers/api').getForecast;
  
 var ForecastContainer = React.createClass({
 	render: function () {
-     return (
-       <Forecast />
-     )
+     return <Forecast />
    }
  });
  
