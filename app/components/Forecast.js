@@ -14,7 +14,8 @@ var styles = {
   	subheader: {
     	fontSize: 30,
     	color: '#333',
-    	fontWeight: 100
+    	fontWeight: 100,
+    	textAlign: 'center'
   	},
   	container: {
     	display: 'flex',
@@ -25,13 +26,6 @@ var styles = {
     	maxWidth: 1200,
     	margin: '50px auto'
   	},
-  	dayContainer: {
-  	  	display: 'flex',
-    	alignItems: 'center',
-    	justifyContent: 'center',
-    	flexDirection: 'column',
-    	margin: 35
-  	},
   	weather: {
     	height: 130
   	}
@@ -41,20 +35,23 @@ function DayItem (props) {
   	var date = getDate(props.day.dt);
   	var icon = props.day.weather[0].icon;
   	return (
-    	<div style={styles.dayContainer}>
+    	<div style={styles.dayContainer} onClick={props.handleClick}>
      	<img style={styles.weather} src={'./app/images/icon/' + icon + '.svg'} alt='Weather' />
       	<h2 style={styles.subheader}>{date}</h2>
     	</div>
   	)	
 }
 
+//handleclick add, review
 function ForecastUI (props) {
   	return (
     	<div>
       	<h1 style={styles.header}>{props.city}</h1>
-      	<div style={styles.container}>
+      	<p style={styles.subheader}>pick a day </p>
+      	<div style={styles.container}  onClick={props.handleClick}>
         	{props.forecast.list.map(function (listItem) {
-          	return <DayItem key={listItem.dt} day={listItem} />
+          	return <DayItem key={listItem.dt} day={listItem} 
+          	handleClick={props.handleClick.bind(null, listItem)}/>
         })}
       	</div>
     	</div>
@@ -70,7 +67,8 @@ function Forecast (props) {
           ? <h1 style={styles.header}> Loading </h1>
           : <ForecastUI 
           	city={props.city} 
-          	forecast={props.forecastData} />
+          	forecast={props.forecastData} 
+          	handleClick={props.handleClick} />
       	}
     	</div>
   	)
@@ -79,7 +77,9 @@ function Forecast (props) {
 Forecast.propTypes = {
   	city: PropTypes.string.isRequired,
   	forecastData: PropTypes.object.isRequired,
-  	isLoading: PropTypes.bool.isRequired
+  	isLoading: PropTypes.bool.isRequired,
+  	handleClick: PropTypes.func.isRequired,
+
 }
 
 module.exports = Forecast;

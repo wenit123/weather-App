@@ -16,6 +16,7 @@ var styles = {
 
 	header: {
     	fontSize: 40,
+      fontWeight: 100,
     	color: "white",
   	}
 }

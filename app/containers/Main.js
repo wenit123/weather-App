@@ -9,7 +9,7 @@ var styles = {
   header: {
   	display: 'flex',
     justifyContent: 'space-between',
-  	background: "#F59938",
+  	background: "#F26D27",
   	color: "white",
     padding: 5,
   }
