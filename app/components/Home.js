@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var SearchContainer = require('../containers/searchContainer');
+var SearchContainer = require('../containers/SearchContainer');
 
 var styles = {
 	container: {
