@@ -9,6 +9,9 @@ var ForecastContainer = React.createClass({
       forecastData: {}
     }
   },
+
+  // review the following 
+  
   componentDidMount: function () {
     this.makeRequest(this.props.routeParams.city)
   },
