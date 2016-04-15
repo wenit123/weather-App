@@ -7,13 +7,13 @@ var temp = detail.temp;
 var styles = {
 	header: {
     	fontSize: 65,
-      	color: '#333',
+      	color: "black",
     	fontWeight: 100,
     	textAlign: 'center'
   	},
   	subheader: {
     	fontSize: 30,
-    	color: '#333',
+    	color: "black",
     	fontWeight: 100,
     	textAlign: 'center'
   	},
