@@ -12,11 +12,8 @@ var styles = {
   	},
   	container: {
     	display: 'flex',
-    	justifyContent: 'space-between',
+    	justifyContent: 'center',
     	alignItems: 'center',
-    	flexDirection: 'row',
-    	flexWrap: 'wrap',
-    	maxWidth: 1200,
     	margin: '50px auto'
   	},
   	weather: {
@@ -28,9 +25,9 @@ function Day (props) {
   	var date = getDate(props.day.dt);
   	var icon = props.day.weather[0].icon;
   	return (
-    	<div style={styles.dayContainer} onClick={props.handleClick}>
-     	<img style={styles.weather} src={'./app/images/icon/' + icon + '.svg'} alt='Weather' />
-      	<h2 style={styles.subheader}>{date}</h2>
+    	<div style={styles.Container} onClick={props.handleClick}>
+     		<img style={styles.weather} src={'./app/images/icon/' + icon + '.svg'} alt='Weather' />
+      		<h2 style={styles.subheader}>{date}</h2>
     	</div>
   	)	
 }

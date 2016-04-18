@@ -4,7 +4,7 @@ var Day = require('./Day');
 var temp = details.temp;
 
 var styles = {
-  Container: {
+  container: {
     fontSize: 34,
     fontWeight: 100,
     maxWidth: 400,
@@ -17,7 +17,7 @@ function Detail (props) {
   return (
     <div style={styles.container}>
       <Day day={props.weather} />
-      <div style={styles.Container}>
+      <div style={styles.container}>
         <p>{props.city}</p>
         <p>{props.weather.weather[0].description}</p>
         <p>min temp: {temp(props.weather.temp.min)} degrees</p>
