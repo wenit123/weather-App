@@ -7,7 +7,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../containers/Main');
 var HomeContainer = require("../containers/HomeContainer");
 var ForecastContainer = require('../containers/ForecastContainer');
-var DayContainer = require('../containers/DayContainer');
+var DetailContainer = require('../containers/DetailContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -19,7 +19,7 @@ var routes = (
     */
       <IndexRoute component={HomeContainer} />
       <Route path='forecast/:city' component={ForecastContainer} />
-      <Route path='day/:city' component={DayContainer} />
+      <Route path='detail/:city' component={DetailContainer} />
     </Route>
   </Router>
 );

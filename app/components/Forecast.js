@@ -1,8 +1,9 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var detail = require('../helpers/detail');
-var getDate = detail.getDate;
-var temp = detail.temp;
+var details = require('../helpers/details');
+var getDate = details.getDate;
+// var temp = details.temp;
+var Day = require('./Day');
 
 var styles = {
 	header: {
@@ -31,16 +32,16 @@ var styles = {
   	}
 }
 
-function DayItem (props) {
-  	var date = getDate(props.day.dt);
-  	var icon = props.day.weather[0].icon;
-  	return (
-    	<div style={styles.dayContainer} onClick={props.handleClick}>
-     	<img style={styles.weather} src={'./app/images/icon/' + icon + '.svg'} alt='Weather' />
-      	<h2 style={styles.subheader}>{date}</h2>
-    	</div>
-  	)	
-}
+// function DayItem (props) {
+//   	var date = getDate(props.day.dt);
+//   	var icon = props.day.weather[0].icon;
+//   	return (
+//     	<div style={styles.dayContainer} onClick={props.handleClick}>
+//      	<img style={styles.weather} src={'./app/images/icon/' + icon + '.svg'} alt='Weather' />
+//       	<h2 style={styles.subheader}>{date}</h2>
+//     	</div>
+//   	)	
+// }
 
 //handleclick add, review
 function ForecastUI (props) {
@@ -50,7 +51,7 @@ function ForecastUI (props) {
       	<p style={styles.subheader}>pick a day </p>
       	<div style={styles.container}  onClick={props.handleClick}>
         	{props.forecast.list.map(function (listItem) {
-          	return <DayItem key={listItem.dt} day={listItem} 
+          	return <Day key={listItem.dt} day={listItem} 
           	handleClick={props.handleClick.bind(null, listItem)}/>
         })}
       	</div>

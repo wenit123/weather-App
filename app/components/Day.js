@@ -1,6 +1,7 @@
 var React = require('react');
-var detail = require('../helpers/detail');
-var getDate = detail.getDate;
+var PropTypes = React.PropTypes;
+var details = require('../helpers/details');
+var getDate = details.getDate;
 
 var styles = {
   	subheader: {
@@ -23,7 +24,7 @@ var styles = {
   	}  	
 }
 
-function DayItem (props) {
+function Day (props) {
   	var date = getDate(props.day.dt);
   	var icon = props.day.weather[0].icon;
   	return (
@@ -33,15 +34,16 @@ function DayItem (props) {
     	</div>
   	)	
 }
-function Day (props) {
-	return (
-		<div>DETAIL!</div>
-   )
-}
+
+// check!!
 
 Day.propTypes = {
-  	city: PropTypes.string.isRequired,
-  	forecastData: PropTypes.object.isRequired,
+	day: PropTypes.shape({
+		dt: PropTypes.number.isRequired,
+		weather: PropTypes.array.isRequired,
+	}).isRequired,
+	handleClick: PropTypes.func,
 }
+
 
 module.exports = Day;
