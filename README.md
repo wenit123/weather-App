@@ -1,3 +1,3 @@
-React.js Fundamentals Curriculum
+ReactJS Fundamentals Curriculum
 ========
 
