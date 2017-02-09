@@ -30,7 +30,6 @@ stuff used:
 - bootstrap
 
 ## Source
-[@tylermcginnis33](https://reacttraining.com/online)
 For more information on React.js Program, [click here](http://reactjsprogram.com)
 
 
